@@ -336,7 +336,7 @@ if [[ -e "$PROJECT_DIR/git-blob.dat" && -e "$PROJECT_DIR/git-dump.dat" ]]; then
 	    && cd $PROJECT_NAME.git \
 	    && cat ../git-blob.dat ../git-dump.dat | \
 		git fast-import \
-	    && git-move-refs.py \
+	    && ../../external/git-move-refs.py \
 	    && git gc --prune=now \
 	    && echo "Created Bare Git Repository from CVS2GIT Dump in $PROJECT_DIR/$PROJECT_NAME.git"
 
